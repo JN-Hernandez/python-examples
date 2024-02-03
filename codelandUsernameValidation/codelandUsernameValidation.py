@@ -1,48 +1,43 @@
-# JN Hernández
-# Thu, Feb 1, 2024
-# Python 3.8.1
-# Problem: https://coderbyte.com/editor/Codeland%20Username%20Validation:Python3
 import re
-import string
 
 
-def checkSpecialCharacters(userInput):
+def check_special_characters(user_input):
     regex = re.compile('[@!#$%^&*()<\\\\">?/|}\'{~:]')
-    if regex.search(userInput) is None:
+    if regex.search(user_input) is None:
         return True
     else:
         return False
 
 
-def checkEndsWithUnderscore(userInput):
-    last_letter = userInput[-1]
+def check_ends_with_underscore(user_input):
+    last_letter = user_input[-1]
     if last_letter != "_":
         return True
     else:
         return False
 
 
-def checkStartsWithLetter(userInput):
-    first_letter = userInput[0]
+def check_starts_with_letter(user_input):
+    first_letter = user_input[0]
     if first_letter.isalpha():
         return True
     else:
         return False
 
 
-def checkUsernameLength(userInput):
-    count = len(userInput)
+def check_username_length(user_input):
+    count = len(user_input)
     if 4 <= count <= 25:
         return True
     else:
         return False
 
 
-def codelandUsernameValidation(strParam):
-    if checkUsernameLength(strParam):
-        if checkStartsWithLetter(strParam):
-            if checkSpecialCharacters(strParam):
-                return checkEndsWithUnderscore(strParam)
+def codeland_username_validation(str_param):
+    if check_username_length(str_param):
+        if check_starts_with_letter(str_param):
+            if check_special_characters(str_param):
+                return check_ends_with_underscore(str_param)
             else:
                 return False
         else:
@@ -51,4 +46,4 @@ def codelandUsernameValidation(strParam):
         return False
 
 
-print(codelandUsernameValidation(input()))
+print(codeland_username_validation(input()))
