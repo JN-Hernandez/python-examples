@@ -6,7 +6,7 @@ import re
 
 def check_special_characters(user_input):
     """Ensure only special character in username is underscore"""
-    regex = re.compile('[@!#$%^&*()<\\\\">?/|}\'{~:]')
+    regex = re.compile('[@!#$%^ &*()<\\\\">?/|}\'{~:]')
     return not bool(regex.search(user_input))
 
 
