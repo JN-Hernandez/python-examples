@@ -17,7 +17,7 @@ USERNAME_WITH_SPACE = "test 1"
 
 
 # TODO: enable unittests to work outside of PyCharm
-class Test_codelandUsernameValidation(unittest.TestCase):
+class TestCodelandUsernameValidation(unittest.TestCase):
     def test_check_valid_username_length(self):
         """Test if a valid username length will yield True"""
         result = cuv.check_username_length(USERNAME_VALID)
@@ -38,11 +38,10 @@ class Test_codelandUsernameValidation(unittest.TestCase):
         result = cuv.check_username_length(USERNAME_EMPTY)
         self.assertFalse(result)
 
-    # def test_check_username_is_none(self):
-    #     TODO: uncomment out when None username is properly handled
-    #     """Test error handling when the username is None"""
-    #     result = cuv.check_username_length(USERNAME_NONE)
-    #     self.assertFalse(result)
+    def test_check_username_is_none(self):
+        """Test error handling when the username is None"""
+        result = cuv.check_username_length(USERNAME_NONE)
+        self.assertFalse(result)
 
     def test_check_valid_starts_with_letter(self):
         """Test if a username starting with a letter will yield True"""

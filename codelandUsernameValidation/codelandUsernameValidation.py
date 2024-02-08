@@ -24,6 +24,8 @@ def check_starts_with_letter(user_input):
 
 def check_username_length(user_input):
     """Ensure username is between 4 and 25 characters"""
+    if user_input is None:
+        return False
     count = len(user_input)
     return bool(4 <= count <= 25)
 
