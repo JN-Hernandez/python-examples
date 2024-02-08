@@ -16,7 +16,6 @@ USERNAME_WITH_SINGLE_QUOTE = "test'1"
 USERNAME_WITH_SPACE = "test 1"
 
 
-# TODO: enable unittests to work outside of PyCharm
 class TestCodelandUsernameValidation(unittest.TestCase):
     def test_check_valid_username_length(self):
         """Test if a valid username length will yield True"""

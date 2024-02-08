@@ -21,6 +21,14 @@ Input: "u__hello_world123"
 Output: true
 ```
 
+# Unittest
+
+```
+cd <path>/<to>/<project>/pythonPlay
+python -m unittest discover codelandUsernameValidation/tests
+python -m unittest codelandUsernameValidation/tests/test_codelandUsernameValidation.py
+```
+
 # Script Details
 
 - Python 3.8.10
