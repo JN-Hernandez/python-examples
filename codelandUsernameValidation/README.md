@@ -23,4 +23,4 @@ Output: true
 
 # Script Details
 
-- Python 3.8.1
+- Python 3.8.10

@@ -5,13 +5,13 @@ import re
 
 
 def check_special_characters(user_input):
-    """Ensure only special character in username is underscore"""
+    """Ensure only special character in username is an underscore"""
     regex = re.compile('[@!#$%^ &*()<\\\\">?/|}\'{~:]')
     return not bool(regex.search(user_input))
 
 
 def check_ends_with_underscore(user_input):
-    """Ensure username does not end with underscore"""
+    """Ensure username does not end with an underscore"""
     last_letter = user_input[-1]
     return bool(last_letter != "_")
 
@@ -39,4 +39,5 @@ def codeland_username_validation(str_param):
     return check_ends_with_underscore(str_param)
 
 
-print(codeland_username_validation(input()))
+if __name__ == '__main__':
+    print(codeland_username_validation(input()))
