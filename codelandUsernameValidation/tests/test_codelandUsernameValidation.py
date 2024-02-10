@@ -1,5 +1,5 @@
 import unittest
-import codelandUsernameValidation.codelandUsernameValidation as cuv
+import codelandUsernameValidation.codeland_username_validation as cuv
 
 USERNAME_EMPTY = ""
 USERNAME_ENDS_WITH_UNDERSCORE = "test1_"
