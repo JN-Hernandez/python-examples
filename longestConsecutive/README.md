@@ -18,6 +18,14 @@ Input: 6 7 14 5 15 9 64 78 8 32
 Output: 5
 ```
 
+# Unittest
+
+```
+cd <path>/<to>/<project>/pythonPlay
+python -m unittest discover longestConsecutive/tests
+python -m unittest longestConsecutive/tests/test_longest_consecutive.py
+```
+
 # Script Details
 
 - Python 3.8.10

@@ -5,14 +5,17 @@ Codeland Longest Consecutive exercise
 
 def convert_user_input_to_array(user_input):
     """Take user input and convert to array"""
-    input_list = user_input.split()
-    try:
-        integer_array = [int(num) for num in input_list]
-        integer_array = [num for num in integer_array if num > 0]
-        return integer_array
+    integer_array = []
+    if user_input:
+        input_list = user_input.split()
+        try:
+            integer_array = [int(num) for num in input_list]
+            integer_array = [num for num in integer_array if num > 0]
+            return integer_array
 
-    except ValueError:
-        integer_array = []
+        except ValueError:
+            return integer_array
+    else:
         return integer_array
 
 
