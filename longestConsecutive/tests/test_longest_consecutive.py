@@ -1,13 +1,13 @@
 import unittest
 import longestConsecutive.longest_consecutive as lc
 
-INPUT_VALID_INTEGERS = "4 3 8 1 2 6 100 9"
+INPUT_EMPTY = ""
+INPUT_MIX_INTEGERS_LETTERS = "4 -3 a 1 2 c 100 b"
 INPUT_NEGATIVE_INTEGERS = "4 -3 8 1 2 6 100 9"
+INPUT_SQL_STRING = "select *"
 INPUT_STRING_LETTERS = "a b c d e f g"
 INPUT_STRING_WORDS = "alpha bravo charlie delta echo"
-INPUT_MIX_INTEGERS_LETTERS = "4 -3 a 1 2 c 100 b"
-INPUT_EMPTY = ""
-INPUT_SQL_STRING = "select *"
+INPUT_VALID_INTEGERS = "4 3 8 1 2 6 100 9"
 
 
 class TestLongestConsecutive(unittest.TestCase):
