@@ -43,7 +43,6 @@ def find_longest_consecutive(array):
     return longest_length
 
 if __name__ == '__main__':
-    # example_input: 4 3 8 1 2 6 100 9
     original_user_input = input()
     array_to_test = convert_user_input_to_array(original_user_input)
     result = check_array_valid(array_to_test)
