@@ -1,5 +1,4 @@
 import unittest
-from unittest.mock import patch
 from longestConsecutive.longest_consecutive import convert_user_input_to_array
 from longestConsecutive.longest_consecutive import check_array_valid
 
@@ -55,19 +54,17 @@ class TestLongestConsecutive(unittest.TestCase):
         result = convert_user_input_to_array(None)
         self.assertFalse(result)
 
-    @patch('longestConsecutive.longest_consecutive.find_longest_consecutive')
-    def test_check_array_valid_valid_array(self, mock_find_longest_consecutive):
+    def test_check_array_valid_valid_array(self):
         """Test if a valid array will invoke the find_longest_consecutive() function"""
-        check_array_valid(INPUT_VALID_ARRAY)
-        mock_find_longest_consecutive.assert_called_once()
-        # TODO: also check that an integer is returned, right now mock object is returned
+        result = check_array_valid(INPUT_VALID_ARRAY)
+        self.assertIsInstance(result, int)
+        self.assertEqual(result, 4)
 
-    @patch('longestConsecutive.longest_consecutive.find_longest_consecutive')
-    def test_check_array_valid_invalid_array(self, mock_find_longest_consecutive):
+    def test_check_array_valid_invalid_array(self):
         """Test if an invalid array will not invoke the find_longest_consecutive() function"""
-        check_array_valid(INPUT_INVALID_ARRAY)
-        mock_find_longest_consecutive.assert_not_called()
-        # TODO: also check that a string is returned, right now mock object is returned
+        result = check_array_valid(INPUT_INVALID_ARRAY)
+        self.assertIsInstance(result, str)
+        self.assertEqual(result, "Invalid input! Please enter positive integers separated by spaces.")
 
 if __name__ == '__main__':
     unittest.main()
