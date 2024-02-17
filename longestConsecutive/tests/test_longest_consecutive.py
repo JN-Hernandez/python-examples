@@ -1,6 +1,7 @@
 import unittest
 from longestConsecutive.longest_consecutive import convert_user_input_to_array
 from longestConsecutive.longest_consecutive import check_array_valid
+from longestConsecutive.longest_consecutive import find_longest_consecutive
 
 INPUT_EMPTY = ""
 INPUT_INVALID_ARRAY = []
@@ -65,6 +66,11 @@ class TestLongestConsecutive(unittest.TestCase):
         result = check_array_valid(INPUT_INVALID_ARRAY)
         self.assertIsInstance(result, str)
         self.assertEqual(result, "Invalid input! Please enter positive integers separated by spaces.")
+
+    def test_find_longest_consecutive_valid_returns_integer(self):
+        """Test if a valid array will return an integer"""
+        result = find_longest_consecutive(INPUT_VALID_ARRAY)
+        self.assertIsInstance(result, int)
 
 if __name__ == '__main__':
     unittest.main()
