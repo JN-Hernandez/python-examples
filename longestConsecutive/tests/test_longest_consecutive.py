@@ -71,6 +71,7 @@ class TestLongestConsecutive(unittest.TestCase):
         """Test if a valid array will return an integer"""
         result = find_longest_consecutive(INPUT_VALID_ARRAY)
         self.assertIsInstance(result, int)
+        self.assertEqual(result, 4)
 
 if __name__ == '__main__':
     unittest.main()
