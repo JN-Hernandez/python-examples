@@ -1,5 +1,5 @@
 """
-Monitor Memory Usage Exercise
+Delete S3 Buckets within AWS
 """
 import boto3
 
