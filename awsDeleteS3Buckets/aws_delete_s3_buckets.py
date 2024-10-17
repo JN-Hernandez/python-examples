@@ -48,7 +48,7 @@ def main():
     print("Gathering list of S3 buckets...", end="")
     bucket_list = get_all_s3_buckets()
     print(" done!\n\nThis script will now iterate through each bucket to \
-determine what to delete.  Please note that this action cannot be undone!")
+determine what to delete.  \nPlease note that this action CANNOT be undone!")
     for bucket in bucket_list:
         user_decision = input(f"\nDelete bucket \"{bucket}\"?  [y/n] ")
         if user_decision.lower() in ["y","yes"]:
